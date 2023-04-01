@@ -10,8 +10,6 @@ export default function Home() {
         <link rel="icon" href="/image/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col h-screen text-center place-content-center">
-      </main>
     </>
   );
 }
