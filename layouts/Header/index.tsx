@@ -5,12 +5,12 @@ import Avatar from "@/components/Avatar";
 import classes from "./style";
 import MobileMenuIcon from "@/components/Swapers/MobileMenuIcon";
 import SideMenu from "../SideMenu";
-import SearchInput from "@/components/SearchInput";
+import DesktopSearch from "@/components/SearchInput/DesktopSearch";
 
 export default function Header() {
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
   return (
-    <header>
+    <header className="container px-4 m-auto">
       <section className={classes.header.wrapper}>
         <MobileMenuIcon
           toggleMobileMenu={toggleMobileMenu}
@@ -27,7 +27,7 @@ export default function Header() {
           <span className={classes.header.frontioun_logo.tags}>{">"}</span>
         </div>
 
-        <SearchInput />
+        <DesktopSearch />
 
         <div className={classes.header.user_area.wrapper}>
           <span className="hidden lg:block">
