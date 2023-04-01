@@ -8,14 +8,17 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
 
+  daisyui: {
+    themes: [],
+  },
   theme: {
     extend: {
-      colors:{
-        primary:{
-          light:'#fff',
-          dark:'#64748b'
-        }
-      }
+      colors: {
+        primary: {
+          light: "#fff",
+          dark: "#64748b",
+        },
+      },
     },
   },
 
