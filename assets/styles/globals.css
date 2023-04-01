@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "yekan-bakh";
+  src: url("../font/YekanBakh-VF.ttf");
+}
+
+@layer base {
+  * {
+    @apply box-border p-0 m-0;
+  }
+
+  html,
+  body {
+    font-family: "yekan-bakh";
+    direction: rtl;
+    @apply flex flex-col h-screen overflow-x-hidden bg-zinc-100 max-w-screen-2xl dark:bg-gray-800;
+  }
+
+  .center-center {
+    @apply flex items-center justify-center;
+  }
+  .center {
+    @apply flex justify-center;
+  }
+}
+
+.glass-container {
+  width: 50%;
+  height: 375px;
+  color: white;
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 1px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 1px rgba(40, 40, 40, 0.35) solid;
+  border-right: 1px rgba(40, 40, 40, 0.35) solid;
+}
+
+.logo__gradient {
+  background: linear-gradient(270deg, #4ade80, #67e8f9, #f87171, #edf514);
+  background-clip: text;
+  color: transparent;
+  background-size: 800%;
+  animation: AnimationName 20s ease infinite;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #edf2f7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
