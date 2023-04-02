@@ -23,7 +23,7 @@ export default function Header() {
 
         <div className={classes.header.frontioun_logo.wraper}>
           <span className={classes.header.frontioun_logo.tags}>{"</ "}</span>
-          <span className={classes.header.frontioun_logo.text}>Frontioun</span>
+          <span className={classes.header.frontioun_logo.text}>فرانتیــون</span>
           <span className={classes.header.frontioun_logo.tags}>{">"}</span>
         </div>
 
