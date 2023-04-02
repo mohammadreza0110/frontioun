@@ -7,7 +7,7 @@ import DarkModeButton from "@/components/Swapers/DarkModeButton";
 export default function SideMenu(props: React.ComponentState) {
   const { toggleMobileMenu, setToggleMobileMenu } = props;
 
-  const [themeText, setThemeText] = useState();
+  const [themeText, setThemeText] = useState('تم خودکار');
 
   useEffect(() => {
     document.addEventListener("click", () => {
@@ -35,9 +35,9 @@ export default function SideMenu(props: React.ComponentState) {
             <li>
               <MobileSearch />
             </li>
-            <li className="flex items-center py-4 mt-8 gap-x-3">
-              <DarkModeButton />
-              <span>تم</span>
+            <li className="flex items-center py-4 mt-8 gap-x-1">
+              <DarkModeButton setThemeText={setThemeText}/>
+              <span>{themeText}</span>
             </li>
             <li className="py-4 mt-8">
               <DarkModeButton />
