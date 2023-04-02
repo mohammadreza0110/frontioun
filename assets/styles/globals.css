@@ -18,13 +18,39 @@
     direction: rtl;
     @apply flex flex-col h-screen overflow-x-hidden bg-zinc-100 max-w-screen-2xl dark:bg-gray-800;
   }
+}
 
+@layer utilities {
   .center-center {
-    @apply flex items-center justify-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .center {
-    @apply flex justify-center;
+    display: flex;
+    justify-content: center;
   }
+  .hero-shadow-gradient {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 8%,
+      rgb(244, 245, 247) 80%
+    ) !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .hero-shadow-gradient-dark {
+      background: linear-gradient(
+        rgba(255, 255, 255, 0) 8%,
+        rgb(31 41 55) 80%
+      ) !important;
+    }
+  }
+}
+
+.hero_text {
+  font-size: 75px;
+  line-height: 1.2;
+  font-variation-settings: "wght" 831, "dots" 0;
 }
 
 .glass-container {
@@ -45,22 +71,10 @@
   background-clip: text;
   color: transparent;
   background-size: 800%;
-  animation: AnimationName 20s ease infinite;
+  animation: logo_animation 20s ease infinite;
 }
 
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes AnimationName {
+@keyframes logo_animation {
   0% {
     background-position: 0% 50%;
   }
