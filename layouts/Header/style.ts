@@ -13,9 +13,9 @@ const classes = {
       // sr-only is a tailwind feature that usefull for screen readers and hidden for others
       label: "sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white",
       button:
-        "text-white cursor-pointer absolute active:scale-90 left-1.5 bottom-[.4rem] bg-blue-700 hover:bg-blue-800 transition-all !outline-none font-medium rounded-xl text-sm px-6 py-2",
+        "text-white cursor-pointer absolute active:scale-90 left-1.5 bottom-[.4rem] bg-blue-700 hover:bg-blue-800 transition-all !outline-none font-medium rounded-full text-sm px-6 py-2",
       input:
-        "input input-bordered border-none bg-zinc-200 dark:bg-slate-700 placeholder:text-gray-500 dark:placeholder:text-white !rounded-2xl input-md w-full pr-10",
+        "input input-bordered w-1/2 border-none bg-zinc-200 dark:bg-slate-700 placeholder:text-gray-500 dark:placeholder:text-white !rounded-full input-md w-full pr-10",
       icon: {
         wrapper: "absolute inset-y-0 right-0 flex items-center pr-8",
         svg: "w-5 h-5 text-gray-500 dark:text-white absolute right-2.5 bottom-3.5",
@@ -27,9 +27,9 @@ const classes = {
       darkMode: {
         wrapper:
           "p-2 transition-colors rounded-full cursor-pointer swap swap-rotate hover:bg-slate-200 hover:dark:bg-slate-600",
-        icon: "w-6 lg:w-8 fill-current text-slate-600 dark:text-primary-light",
+        icon: "w-6 lg:w-[31px] fill-current text-slate-600 dark:text-primary-light",
       },
-      cart: "hidden lg:block p-3 transition-colors rounded-full cursor-pointer hover:bg-slate-200",
+      cart: "hidden lg:block p-3 transition-colors rounded-full cursor-pointer hover:bg-slate-200 hover:dark:bg-slate-600 text-slate-600 dark:text-primary-light hover:bg-slate-200",
     },
 
     subHeader: {
