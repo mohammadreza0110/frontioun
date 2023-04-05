@@ -1,12 +1,11 @@
-import classes from "@/layouts/Header/style";
 import React from "react";
 
 export default function MobileSearch() {
   return (
-    <div className={classes.side_bar.search_area.wrapper}>
+    <div>
       {/* this label is hidden because of sr-only class */}
       <label
-        className={classes.side_bar.search_area.label}
+        className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
         htmlFor="default-search"
       >
         Search
@@ -14,17 +13,17 @@ export default function MobileSearch() {
 
       <div className="relative">
         <input
-          className={classes.side_bar.search_area.input}
+          className= "w-full py-3 pl-10 pr-4 border-none rounded-full bg-zinc-200 dark:bg-slate-700 placeholder:text-gray-500 dark:placeholder:text-white input-md"
           type="search"
           id="default-search"
           placeholder="دنبال چی هستی؟"
           required
         />
 
-        <div className={classes.side_bar.search_area.icon.wrapper}>
+        <div>
           <svg
             aria-hidden="true"
-            className={classes.side_bar.search_area.icon.svg}
+            className="w-5 h-5 text-gray-500 dark:text-white absolute left-2.5 bottom-3.5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

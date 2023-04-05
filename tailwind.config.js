@@ -6,11 +6,9 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
+    "./utils/**/*.{js,ts,jsx,tsx}",
   ],
 
-  daisyui: {
-    themes: [],
-  },
   theme: {
     extend: {
       colors: {
@@ -19,8 +17,21 @@ module.exports = {
           dark: "#64748b",
         },
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+        screens: {
+          "2xl": "13660px",
+        },
+      },
     },
   },
 
-  plugins: [require("daisyui"), require("@tailwindcss/line-clamp")],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

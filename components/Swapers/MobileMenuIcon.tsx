@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import classes from "@/layouts/Header/style";
 import { FiMenu } from "react-icons/fi";
 
 export default function MobileMenuIcon(props: any) {
@@ -13,7 +12,7 @@ export default function MobileMenuIcon(props: any) {
 
   return (
     <label
-      className={classes.side_bar.hamburger_icon}
+      className="lg:hidden !bg-transparent !border-none text-primary-dark dark:text-primary-light"
       onClick={(e: any) => handleToggle(e)}
     >
       <FiMenu size={30} />

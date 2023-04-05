@@ -1,5 +1,18 @@
 import React from "react";
+import useWave from "use-wave";
 
-export default function BaseButton() {
-  return <button className="w-5/12 h-16 mt-6 text-lg text-white bg-blue-700 border-none rounded-full hover:bg-blue-600 btn btn-info">بریم تو کارش!</button>;
+export default function BaseButton({ classes, title, children }: any) {
+  const wave = useWave({
+    color: "#eee",
+    easing: "ease-in",
+  });
+  return (
+    <button
+      ref={wave}
+      className={`${classes} center-center gap-x-1.5 px-4 py-2 active:scale-90 !outline-none text-white cursor-pointer transition-all`}
+    >
+      {title}
+      {children && <>{children}</>}
+    </button>
+  );
 }
