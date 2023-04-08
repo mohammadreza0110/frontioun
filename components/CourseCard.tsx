@@ -46,10 +46,10 @@ const CourseCard = ({ price, image, title, children }: Props) => {
             <div className="flex items-end gap-x-1.5 text-slate-800 dark:text-slate-100">
               <span className="text-lg font-bold">{formattedNumber}</span>
               <div className="leading-[1]">
-                <p className="text-[9px] text-zinc-400 font-black pb-1.5">
+                <div className="text-[9px] text-zinc-400 font-black pb-1.5">
                   <h6>تــــو</h6>
                   <h6>مان</h6>
-                </p>
+                </div>
               </div>
             </div>
           </div>
