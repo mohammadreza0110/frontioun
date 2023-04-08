@@ -10,7 +10,6 @@ import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { GiMoneyStack } from "react-icons/gi";
 import { IoIosArrowBack } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";
-import NoSSR from "@/components/NoSSR";
 
 export default function Home() {
   const ReactImage = {
