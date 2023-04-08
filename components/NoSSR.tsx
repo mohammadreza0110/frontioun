@@ -1,13 +1,14 @@
-// import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
+import React, { ReactNode } from "react";
 
-// const DynamicSidebarWithNoSSR = dynamic(() => import('../components/Sidebar'), {
-//     ssr: false
-// });
+interface Props {
+  children: ReactNode;
+}
 
-// export default function R() {
-//     return (
-//         <div>
-//             <DynamicSidebarWithNoSSR />
-//         </div>
-//     );
-// }
+const NoSSR = (props: Props) => (
+  <React.Fragment>{props.children}</React.Fragment>
+);
+
+export default dynamic(() => Promise.resolve(NoSSR), {
+  ssr: false,
+});

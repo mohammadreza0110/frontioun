@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { IoContrastOutline } from "react-icons/io5";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { BsSun } from "react-icons/bs";
+import NoSSR from "../NoSSR";
 
 const DarkModeButton = ({ setThemeText }: any) => {
   let { systemTheme, theme, setTheme } = useTheme();
@@ -33,42 +34,44 @@ const DarkModeButton = ({ setThemeText }: any) => {
   }, []);
 
   return (
-    <div className="transition-colors rounded-full cursor-pointer hover:bg-slate-200 hover:dark:bg-slate-600">
-      {theme === "system" && (
-        <button
-          onClick={handleThemeToggle}
-          title="تم سایت بر اساس سیستم شما"
-          className="p-2.5"
-        >
-          <IoContrastOutline
+    <NoSSR>
+      <div className="transition-colors rounded-full cursor-pointer hover:bg-slate-200 hover:dark:bg-slate-600">
+        {theme === "system" && (
+          <button
+            onClick={handleThemeToggle}
             title="تم سایت بر اساس سیستم شما"
-            className="text-primary-dark dark:text-primary-light"
-            size={27}
-          />
-        </button>
-      )}
+            className="p-2.5"
+          >
+            <IoContrastOutline
+              title="تم سایت بر اساس سیستم شما"
+              className="text-primary-dark dark:text-primary-light"
+              size={27}
+            />
+          </button>
+        )}
 
-      {theme !== "system" && (
-        <button
-          className="p-2"
-          onClick={(e) => handleThemeToggle(e)}
-          role="button"
-          tabIndex={0}
-        >
-          {theme === "dark" ? (
-            <MdOutlineDarkMode
-              size={30}
-              className="w-[31px] fill-current text-slate-600 dark:text-primary-light"
-            />
-          ) : (
-            <BsSun
-              size={30}
-              className="w-[31px] fill-current text-slate-600 dark:text-primary-light"
-            />
-          )}
-        </button>
-      )}
-    </div>
+        {theme !== "system" && (
+          <button
+            className="p-2"
+            onClick={(e) => handleThemeToggle(e)}
+            role="button"
+            tabIndex={0}
+          >
+            {theme === "dark" ? (
+              <MdOutlineDarkMode
+                size={30}
+                className="w-[31px] fill-current text-slate-600 dark:text-primary-light"
+              />
+            ) : (
+              <BsSun
+                size={30}
+                className="w-[31px] fill-current text-slate-600 dark:text-primary-light"
+              />
+            )}
+          </button>
+        )}
+      </div>
+    </NoSSR>
   );
 };
 
