@@ -2,8 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { RiLoginCircleLine } from "react-icons/ri";
 
-export default function Avatar() {
-  const isLoggedIn = false;
+interface Props {
+  isLoggedIn: boolean;
+}
+const Avatar: React.FC<Props> = ({ isLoggedIn }: Props) => {
   return (
     <div className="cursor-pointer avatar">
       {isLoggedIn ? (
@@ -17,11 +19,13 @@ export default function Avatar() {
           />
         </div>
       ) : (
-        <div className="pl-1 flex items-end text-base gap-x-1.5">
+        <div className="pl-1 flex items-end text-base gap-x-1.5 text-slate-800 dark:text-slate-100">
           <RiLoginCircleLine size={23} />
           <span>ورود</span>
         </div>
       )}
     </div>
   );
-}
+};
+
+export default Avatar;

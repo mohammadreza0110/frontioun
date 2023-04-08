@@ -4,7 +4,7 @@ export default function WaveArrow() {
   return (
     <>
       <svg
-      className="w-20 m-auto translate-x-8 xl:translate-x-20 xl:-translate-y-10 dark:fill-slate-300 fill-slate-700"
+        className="w-20 m-auto translate-x-1 xl:translate-x-20 xl:-translate-y-10 dark:fill-slate-300 fill-slate-700"
         xmlns="http://www.w3.org/2000/svg"
         shape-rendering="geometricPrecision"
         text-rendering="geometricPrecision"

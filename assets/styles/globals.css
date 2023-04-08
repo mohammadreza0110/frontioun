@@ -9,7 +9,7 @@
 
 @layer base {
   * {
-    @apply box-border p-0 m-0 transition-all duration-100;
+    @apply box-border p-0 m-0;
   }
 
   html,
@@ -47,21 +47,24 @@
   .garranty_card {
     @apply shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)];
   }
+
+  .glass-container {
+    color: white;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  }
+
+  .glass-container-off {
+    color: unset;
+    backdrop-filter: unset;
+    background-color: unset;
+    box-shadow: unset;
+  }
 }
 
 .hero_text {
   font-variation-settings: "wght" 831, "dots" 0;
-}
-
-.glass-container {
-  color: white;
-  border-radius: 14px;
-  backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-  border: 1px rgba(255, 255, 255, 0.4) solid;
-  border-bottom: 1px rgba(40, 40, 40, 0.35) solid;
-  border-right: 1px rgba(40, 40, 40, 0.35) solid;
 }
 
 .logo__gradient {

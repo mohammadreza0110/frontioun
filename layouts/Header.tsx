@@ -3,14 +3,18 @@ import { FaShoppingCart } from "react-icons/fa";
 import DarkModeButton from "@/components/Swapers/DarkModeButton";
 import Avatar from "@/components/Avatar";
 import MobileMenuIcon from "@/components/Swapers/MobileMenuIcon";
-import SideMenu from "../SideMenu";
+import SideMenu from "./SideMenu";
 import DesktopSearch from "@/components/SearchInput/DesktopSearch";
+import FrontiounLogo from "@/components/FrontiounLogo";
+import dynamic from "next/dynamic";
 
 export default function Header() {
-  const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+  const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
+  const [loginHandler, setLoginHandler] = useState<boolean>(false);
+
   return (
-    <header className="container fixed z-50 mt-10 xl:px-16 glass-container">
-      <section className="relative flex items-center justify-between py-6 m-auto shadow-md rounded-2xl lg:py-9 px-7">
+    <header className="container fixed z-50 border lg:border-none top-5 rounded-2xl border-slate-200 dark:border-slate-700 lg:top-0 lg:mt-16 lg:relative glass-container lg:glass-container-off">
+      <section className="relative flex items-center justify-between py-6 m-auto rounded-2xl lg:bg-primary-light lg:dark:bg-primary-dark lg:py-9 px-7">
         <MobileMenuIcon
           toggleMobileMenu={toggleMobileMenu}
           setToggleMobileMenu={setToggleMobileMenu}
@@ -20,11 +24,7 @@ export default function Header() {
           setToggleMobileMenu={setToggleMobileMenu}
         />
 
-        <div className="m-auto text-2xl font-extrabold cursor-pointer lg:text-4xl whitespace-nowrap logo__gradient drop-shadow lg:m-0">
-          <span className="text-sm lg:text-base">{"</ "}</span>
-          <span className="px-1 lg:inline-block max-w-max">فرانتیــون</span>
-          <span className="text-sm lg:text-base">{">"}</span>
-        </div>
+        <FrontiounLogo classes="text-2xl lg:text-4xl" />
 
         <DesktopSearch />
 
@@ -33,11 +33,12 @@ export default function Header() {
             <DarkModeButton />
           </span>
 
-          <Avatar />
-
-          <div className="hidden p-3 transition-colors rounded-full cursor-pointer lg:block hover:bg-slate-200 hover:dark:bg-slate-600 text-slate-600 dark:text-primary-light">
-            <FaShoppingCart size={22} />
-          </div>
+          <Avatar isLoggedIn={loginHandler} />
+          {loginHandler && (
+            <div className="hidden p-3 transition-colors rounded-full cursor-pointer lg:block hover:bg-slate-200 hover:dark:bg-slate-600 text-slate-600 dark:text-primary-light">
+              <FaShoppingCart size={22} />
+            </div>
+          )}
         </div>
       </section>
 
