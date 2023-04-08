@@ -10,6 +10,7 @@ import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { GiMoneyStack } from "react-icons/gi";
 import { IoIosArrowBack } from "react-icons/io";
 import { BiSupport } from "react-icons/bi";
+import NoSSR from "@/components/NoSSR";
 
 export default function Home() {
   const ReactImage = {
@@ -72,7 +73,10 @@ export default function Home() {
             width={290}
             height={100}
           />
-          <div id="banner-shadow" className="absolute z-10 w-screen h-32 hero-shadow-gradient dark:hero-shadow-gradient-dark -bottom-[9px] blur-sm rounded-[19px] left-0 md:right-0 md:translate-x-0" />
+          <div
+            id="banner-shadow"
+            className="absolute z-10 w-screen h-32 hero-shadow-gradient dark:hero-shadow-gradient-dark -bottom-[9px] blur-sm rounded-[19px] left-0 md:right-0 md:translate-x-0"
+          />
         </div>
       </section>
 
