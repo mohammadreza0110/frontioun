@@ -6,11 +6,11 @@ export default function WaveArrow() {
       <svg
         className="w-20 m-auto translate-x-1 xl:translate-x-20 xl:-translate-y-10 dark:fill-slate-300 fill-slate-700"
         xmlns="http://www.w3.org/2000/svg"
-        shape-rendering="geometricPrecision"
-        text-rendering="geometricPrecision"
-        image-rendering="optimizeQuality"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        shapeRendering="geometricPrecision"
+        textRendering="geometricPrecision"
+        imageRendering="optimizeQuality"
+        fillRule="evenodd"
+        clipRule="evenodd"
         viewBox="0 0 512 442.137"
       >
         <path d="M498.536 442.137c-31.387-25.229-67.042-47.435-83.064-62.714-5.282-5.036-11.007-12.153-1.664-8.574 25.872 9.909 54.004 27.667 75.003 49.744-2.547-18.498 2.366-41.616 9.997-60.504.939-2.328 3.886-11.918 7.547-15.089 1.358-1.177 2.819-1.472 4.307-.18.849.739 1.28 1.995 1.333 3.707.152 4.983-3.387 19.558-6.693 33.835-4.904 21.183-7.422 37.783-6.766 59.775z" />
