@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import MobileSearch from "@/components/SearchInput/MobileSearch";
 import DarkModeButton from "@/components/Swapers/DarkModeButton";
+import NoSSR from "@/components/NoSSR";
 
 export default function SideMenu(props: React.ComponentState) {
   const { toggleMobileMenu, setToggleMobileMenu } = props;
@@ -23,12 +24,8 @@ export default function SideMenu(props: React.ComponentState) {
       >
         <section>
           <div className="py-4 text-3xl font-extrabold text-center cursor-pointer whitespace-nowrap logo__gradient drop-shadow">
-            <span className="text-sm">
-              {"</ "}
-            </span>
-            <span className="px-1 max-w-max">
-              فرانتیــون
-            </span>
+            <span className="text-sm">{"</ "}</span>
+            <span className="px-1 max-w-max">فرانتیــون</span>
             <span className="text-sm">{">"}</span>
           </div>
 
@@ -40,12 +37,8 @@ export default function SideMenu(props: React.ComponentState) {
               <DarkModeButton setThemeText={setThemeText} />
               <span>{themeText}</span>
             </li>
-            <li className="py-4 mt-8">
-              <DarkModeButton />
-            </li>
-            <li className="py-4 mt-8">
-              <DarkModeButton />
-            </li>
+            <li className="py-4 mt-8">sdf</li>
+            <li className="py-4 mt-8">sdf</li>
           </ul>
         </section>
 
