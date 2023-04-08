@@ -6,8 +6,6 @@ import MobileMenuIcon from "@/components/Swapers/MobileMenuIcon";
 import SideMenu from "./SideMenu";
 import DesktopSearch from "@/components/SearchInput/DesktopSearch";
 import FrontiounLogo from "@/components/FrontiounLogo";
-import dynamic from "next/dynamic";
-import NoSSR from "@/components/NoSSR";
 
 export default function Header() {
   const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
