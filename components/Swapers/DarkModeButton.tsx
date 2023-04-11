@@ -53,6 +53,7 @@ const DarkModeButton = ({ setThemeText }: any) => {
         {theme !== "system" && (
           <button
             className="p-2"
+            title="تم سایت بر اساس سیستم شما"
             onClick={(e) => handleThemeToggle(e)}
             role="button"
             tabIndex={0}
