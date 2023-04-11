@@ -7,7 +7,7 @@ import NoSSR from "@/components/NoSSR";
 export default function SideMenu(props: React.ComponentState) {
   const { toggleMobileMenu, setToggleMobileMenu } = props;
 
-  const [themeText, setThemeText] = useState("تم خودکار");
+  const [themeText, setThemeText] = useState("");
 
   useEffect(() => {
     document.addEventListener("click", () => {
@@ -35,7 +35,7 @@ export default function SideMenu(props: React.ComponentState) {
             </li>
             <li className="flex items-center py-4 mt-8 gap-x-1">
               <DarkModeButton setThemeText={setThemeText} />
-              <span>{themeText}</span>
+              <div>{themeText}</div>
             </li>
             <li className="py-4 mt-8">sdf</li>
             <li className="py-4 mt-8">sdf</li>
