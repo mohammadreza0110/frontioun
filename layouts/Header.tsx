@@ -12,7 +12,7 @@ export default function Header() {
   const [loginHandler, setLoginHandler] = useState<boolean>(false);
 
   return (
-    <header className="container fixed z-50 border lg:border-none top-5 rounded-2xl border-slate-200 dark:border-slate-700 lg:top-0 lg:mt-16 lg:relative glass-container lg:glass-container-off">
+    <header className="container fixed z-50 border lg:border-none rounded-2xl border-slate-200 dark:border-slate-700 lg:mt-16 lg:relative glass-container lg:glass-container-off">
       <section className="relative flex items-center justify-between py-6 m-auto rounded-2xl lg:bg-primary-light lg:dark:bg-primary-dark lg:py-9 px-7">
         <MobileMenuIcon
           toggleMobileMenu={toggleMobileMenu}
