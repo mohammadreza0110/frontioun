@@ -1,8 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import Image, { ImageProps } from "next/image";
 import { IoIosArrowDropleft } from "react-icons/io";
 import BaseButton from "./BaseButton";
 import NoSSR from "./NoSSR";
+import Link from "next/link";
 
 interface Props {
   price: number;
@@ -12,7 +13,9 @@ interface Props {
 }
 
 const CourseCard = ({ price, image, title, children }: Props) => {
-  const formattedNumber = price.toLocaleString();
+  const [formattedNumber, setFormattedNumber] = useState<any>(
+    (1000000).toLocaleString()
+  );
   return (
     <NoSSR>
       <div className="relative bg-white shadow-md dark:bg-slate-900 rounded-3xl">
@@ -36,12 +39,14 @@ const CourseCard = ({ price, image, title, children }: Props) => {
             {children}
           </div>
           <div className="flex items-center justify-between">
-            <BaseButton
-              classes="bg-blue-700 rounded-2xl py-2.5 px-3 text-[13px] font-bold"
-              title="ثبت نام دوره"
-            >
-              <IoIosArrowDropleft size={17} />
-            </BaseButton>
+            <Link href={`courses/${title}`}>
+              <BaseButton
+                name="ثبت نام دوره"
+                classes="bg-blue-700 rounded-2xl py-2.5 px-3 text-[13px] font-bold"
+              >
+                <IoIosArrowDropleft size={17} />
+              </BaseButton>
+            </Link>
 
             <div className="flex items-end gap-x-1.5 text-slate-800 dark:text-slate-100">
               <span className="text-lg font-bold">{formattedNumber}</span>
