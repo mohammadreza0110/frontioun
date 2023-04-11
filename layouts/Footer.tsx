@@ -12,15 +12,15 @@ export default function Footer() {
       <section className="container">
         <div className="flex flex-col items-center justify-between lg:flex-row pb-7">
           <FrontiounLogo classes="text-4xl" />
-          <span className="w-[70%] hidden md:block border border-t mt-3 border-zinc-200 dark:border-slate-600" />
+          <div className="w-[70%] hidden md:block border border-t mt-3 border-zinc-200 dark:border-slate-600" />
           <div className="flex items-center pt-2 gap-x-">
-            <span
+            <div
               title="کانال تلگرام"
               className="p-2 transition-colors rounded-full cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500"
             >
               <RiTelegramLine size={28} />
-            </span>
-            <span
+            </div>
+            <div
               title="کانال بله"
               className="p-[11px] transition-colors rounded-full cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500"
             >
@@ -31,13 +31,13 @@ export default function Footer() {
                 height={22}
                 alt="Bale messenger icon"
               />
-            </span>
-            <span
+            </div>
+            <div
               title="حساب لینکدین"
               className="p-2 transition-colors rounded-full cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500"
             >
               <CiLinkedin size={28} />
-            </span>
+            </div>
           </div>
         </div>
 
@@ -72,20 +72,20 @@ export default function Footer() {
               <li className="flex justify-between">
                 <div className="center-center gap-x-1.5">
                   <RiMailSendLine size={20} />
-                  <span>ایمیل :</span>
+                  <div>ایمیل :</div>
                 </div>
-                <span>info@frontioun.ir</span>
+                <div>info@frontioun.ir</div>
               </li>
               <li className="flex justify-between">
                 <div className="center-center gap-x-1.5">
                   <RiTelegramLine size={25} />
-                  <span>آیدی تلگرام :</span>
+                  <div>آیدی تلگرام :</div>
                 </div>
-                <span>frontioun_support@</span>
+                <div>frontioun_support@</div>
               </li>
               <li className="flex justify-between">
                 <div className="center-center gap-x-1.5">
-                  <span>
+                  <div>
                     <Image
                       className="grayscale-[80%] invert-[60%]"
                       src="/images/bale.png"
@@ -93,10 +93,10 @@ export default function Footer() {
                       height={21}
                       alt="Bale messenger icon"
                     />
-                  </span>
-                  <span>آیدی بله :</span>
+                  </div>
+                  <div>آیدی بله :</div>
                 </div>
-                <span>frontioun_support@</span>
+                <div>frontioun_support@</div>
               </li>
             </ul>
           </div>
