@@ -15,7 +15,7 @@ export default function SearchInput() {
 
       <div className="relative">
         <BaseButton
-          title="بگرد"
+          name="بگرد"
           classes="absolute left-1.5 bottom-[.4rem] bg-blue-700 hover:bg-blue-800 rounded-full text-sm px-6"
         />
 
