@@ -145,15 +145,15 @@ export default function ShowCourse() {
             اطلاعات دوره اینجاست :)
           </h3>
           <div className="grid grid-cols-2 gap-3">
-            <CourseFeatures title=">تعداد جلسات :" subTitle="30">
+            <CourseFeatures title="تعداد جلسات :" subTitle="30">
               <FaSitemap size={25} />
             </CourseFeatures>
 
-            <CourseFeatures title=">آخرین آپدیت :" subTitle="1402/03/07">
+            <CourseFeatures title="آخرین آپدیت :" subTitle="1402/03/07">
               <RxUpdate size={25} />
             </CourseFeatures>
 
-            <CourseFeatures title=">مدت دوره:" subTitle="25:45:00">
+            <CourseFeatures title="مدت دوره:" subTitle="25:45:00">
               <BsClockHistory size={25} />
             </CourseFeatures>
 
