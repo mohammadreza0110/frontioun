@@ -22,14 +22,14 @@ export default function ShowCourse() {
       <article className="px-6 py-3 my-8 border shadow-md dark:border-0 rounded-2xl dark:bg-slate-700">
         <section className="flex items-center justify-between pb-3">
           <div className="flex items-baseline justify-end gap-x-1.5">
-            <h3 className="text-xs font-">تکمیل ضبط</h3>
+            <h3 className="text-xs font-">ضبطشم تکمیل شده</h3>
             <div className="text-4xl font-bold leading-none text-emerald-400 animate-pulse">
               .
             </div>
           </div>
           <div className="flex items-center justify-end gap-x-1.5">
             <BiSupport size={20} />
-            <h3 className="text-xs font-light">همراه با پشتیبان</h3>
+            <h3 className="text-xs font-light">پشتیبانم داری </h3>
           </div>
         </section>
 
@@ -98,7 +98,7 @@ export default function ShowCourse() {
 
           <div>
             <div className="flex items-center gap-x-2 ">
-              <h6 className="text-sm font-light">اشتراک گذاری :</h6>
+              <h6 className="text-sm font-light">برا دوستاتم بفرست :)</h6>
               <RiTelegramLine
                 title="اشتراک گزاری در تلگرام"
                 className="transition-colors cursor-pointer dark:text-current text-zinc-500 dark:hover:text-zinc-300 hover:text-zinc-400"
@@ -140,7 +140,7 @@ export default function ShowCourse() {
           </p>
         </section>
 
-        <section className="px-3 pt-1 pb-4 border shadow-md dark:border-0 dark:bg-slate-700 rounded-2xl">
+        <section className="sticky top-0 px-3 pt-1 pb-4 border shadow-md dark:border-0 dark:bg-slate-700 rounded-2xl">
           <h3 className="py-3 font-bold text-center">
             اطلاعات دوره اینجاست :)
           </h3>
@@ -161,8 +161,11 @@ export default function ShowCourse() {
               <BsPersonVideo3 size={25} />
             </CourseFeatures>
           </div>
-          <div className="mt-2 center">
-            <RatingStars />
+          <div className="p-2 mt-4 shadow-lg dark:bg-slate-600 bg-slate-200 rounded-2xl center">
+            <div className="flex flex-col items-center gap-y-1">
+              <div>اگه دوره رو دیدی رای بده</div>
+              <RatingStars />
+            </div>
           </div>
         </section>
 
@@ -189,7 +192,7 @@ export default function ShowCourse() {
 
               <BaseButton
                 name="پولمو پس بده :("
-                classes="hover:bg-green-700 hover:ring-0 ring ring-green-500 rounded-2xl py-2 px-12 text-[18px] text-green-400 hover:text-white font-black mt-4 "
+                classes="hover:bg-red-700 hover:ring-0 ring ring-red-500 rounded-2xl py-2 px-12 text-[18px] text-red-400 hover:text-white font-black mt-4 "
                 title="چشم :)"
               >
                 {/* <IoIosArrowDropleft size={23} /> */}
