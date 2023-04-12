@@ -1,58 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import { AiFillStar } from "react-icons/ai";
 
 export default function RatingStars() {
+  const [showTitle, setShowTitle] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
+  const stars = ["خیلی بد", "بد", "متوسط", "خوب", "عالی"];
+
+  const handleMouseEnter = (index: number) => {
+    setHover(index);
+    setShowTitle(true);
+  };
+
+  const handleMouseLeave = (rating: number) => {
+    setHover(rating);
+    setShowTitle(false);
+  };
+
   return (
     <div className="flex items-center">
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 cursor-pointer hover:text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>First star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 cursor-pointer hover:text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Second star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 cursor-pointer hover:text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Third star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 cursor-pointer hover:text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Fourth star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 cursor-pointer h-5cursor-pointer hover:text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Fifth star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
+      {stars.map((star, index) => {
+        index += 1;
+        return (
+          <div className="relative">
+            <AiFillStar
+              size={30}
+              key={index}
+              className={`${
+                index <= hover
+                  ? "text-yellow-400"
+                  : "text-slate-400 dark:text-slate-100"
+              } w-5 h-5 cursor-pointer hover:scale-125 transitio-all duration-100 active:scale-105`}
+              onClick={() => setRating(index)}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(rating)}
+            />
+
+            {showTitle && index === hover && (
+              <span className="absolute text-xs px-1 py-0.5 text-amber-900 bg-yellow-300 rounded-lg min-w-max top-8">
+                {star}
+              </span>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
