@@ -3,7 +3,7 @@ import Image from "next/image";
 import BaseButton from "@/components/BaseButton";
 import WaveArrow from "../components/svgs/WaveArrow";
 import CourseCard from "@/components/CourseCard";
-import GarrantyCard from "@/components/GarrantyCard";
+import GarrantyCard from "@/components/CommitmentCard";
 import { SlDiamond } from "react-icons/sl";
 import { SiReactos } from "react-icons/si";
 import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
