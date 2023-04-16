@@ -8,12 +8,12 @@ import { RiMailSendLine } from "react-icons/ri";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20">
+    <footer className="relative pt-10 mt-20 border-t lg:border-t-0 dark:border-t-slate-500">
       <section className="container">
-        <div className="flex flex-col items-center justify-between lg:flex-row pb-7">
+        <div className="flex flex-col items-center justify-between pb-6 lg:flex-row">
           <FrontiounLogo classes="text-4xl" />
-          <div className="w-[70%] hidden md:block border border-t mt-3 border-zinc-200 dark:border-slate-600" />
-          <div className="flex items-center pt-2 gap-x-">
+          <div className="lg:w-[65%] xl:w-[72%] hidden lg:block border border-t mt-3 border-zinc-200 dark:border-slate-600" />
+          <div className="flex items-center pt-2">
             <div
               title="کانال تلگرام"
               className="p-2 transition-colors rounded-full cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-500"
