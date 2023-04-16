@@ -17,7 +17,7 @@ export default function SideMenu(props: React.ComponentState) {
   return (
     <>
       <aside
-        className={`fixed inset-0 top-[-21px] z-50 h-screen py-8 transition-all shadow-md w-[80vw] bg-primary-light dark:bg-primary-dark px-4 translate-x-0 lg:translate-x-full ${
+        className={`fixed inset-0 z-50 h-screen py-8 transition-all shadow-md w-[80vw] bg-primary-light dark:bg-primary-dark px-4 translate-x-0 lg:translate-x-full ${
           toggleMobileMenu ? "translate-x-0" : "translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()}
