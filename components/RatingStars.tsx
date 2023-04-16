@@ -7,33 +7,32 @@ export default function RatingStars() {
   const [hover, setHover] = useState(0);
   const stars = ["خیلی بد", "بد", "متوسط", "خوب", "عالی"];
 
-  const handleMouseEnter = (index: number) => {
+  const handleMouseMove = (index: number) => {
     setHover(index);
     setShowTitle(true);
   };
 
-  const handleMouseLeave = (rating: number) => {
+  const handleMouseOut = (rating: number) => {
     setHover(rating);
     setShowTitle(false);
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center gap-x-5 xl:gap-x-0">
       {stars.map((star, index) => {
         index += 1;
         return (
-          <div className="relative">
+          <div className="relative" key={index * Math.random()}>
             <AiFillStar
               size={30}
-              key={index}
               className={`${
                 index <= hover
                   ? "text-yellow-400"
                   : "text-slate-400 dark:text-slate-100"
               } w-5 h-5 cursor-pointer hover:scale-125 transitio-all duration-100 active:scale-105`}
               onClick={() => setRating(index)}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(rating)}
+              onMouseMove={() => handleMouseMove(index)}
+              onMouseOut={() => handleMouseOut(rating)}
             />
 
             {showTitle && index === hover && (
