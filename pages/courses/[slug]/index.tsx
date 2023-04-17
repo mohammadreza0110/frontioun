@@ -18,40 +18,44 @@ export default function ShowCourse() {
   const [formattedNumber, setFormattedNumber] = useState<string>(
     (1000000).toLocaleString("fa-IR")
   );
+  const [selected, setSelected] = useState<number>(0);
+  const toggle = (i: any) => {
+    if (selected === i) {
+      return setSelected(0);
+    }
+    setSelected(i);
+  };
 
   const coursees = [
     {
-      section: {
-        season: "بخش اول",
-        name: "بخش اول",
-        active: false,
-        lessons: {
-          title: "معرفی فلان چیز",
-          duration: "03:52",
-        },
-      },
+      season: "بخش اول",
+      name: "بخش اول",
+      id: 1,
+      lessons: [
+        { title: "معرفی فلان چیز", duration: "03:52" },
+        { title: "معرفی فلان چیز", duration: "03:52" },
+        { title: "معرفی فلان چیز", duration: "03:52" },
+      ],
     },
     {
-      section: {
-        season: "بخش دوم",
-        name: "بخش دوم",
-        active: false,
-        lessons: {
-          title: "معرفی فلان چیز",
-          duration: "03:52",
-        },
-      },
+      season: "بخش دوم",
+      name: "بخش دوم",
+      id: 2,
+      lessons: [
+        { title: "معرفی فلان چیز", duration: "03:52" },
+        { title: "معرفی فلان چیز", duration: "03:52" },
+        { title: "معرفی فلان چیز", duration: "03:52" },
+      ],
     },
     {
-      section: {
-        season: "بخش سوم",
-        name: "بخش سوم",
-        active: false,
-        lessons: {
-          title: "معرفی فلان چیز",
-          duration: "03:52",
-        },
-      },
+      season: "بخش سوم",
+      name: "بخش سوم",
+      id: 3,
+      lessons: [
+        { title: "معرفی فلان چیز", duration: "03:52" },
+        { title: "معرفی فلان چیز", duration: "03:52" },
+        { title: "معرفی فلان چیز", duration: "03:52" },
+      ],
     },
   ];
 
@@ -243,17 +247,8 @@ export default function ShowCourse() {
             جلسات دوره
           </h2>
 
-          <div className="grid grid-cols-1 gap-y-">
-            {coursees.map((course, index) => {
-              return (
-                <CourseDropDown
-                  key={index * Math.random()}
-                  sectionSeason={course.section.season}
-                  sectionName={course.section.name}
-                  sectionLessons={course.section.lessons}
-                />
-              );
-            })}
+          <div className="grid grid-cols-1">
+            <CourseDropDown courseDetails={coursees} />
           </div>
         </section>
 
