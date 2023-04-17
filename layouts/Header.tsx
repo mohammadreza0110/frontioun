@@ -6,6 +6,7 @@ import MobileMenuIcon from "@/components/Swapers/MobileMenuIcon";
 import SideMenu from "./SideMenu";
 import DesktopSearch from "@/components/SearchInput/DesktopSearch";
 import FrontiounLogo from "@/components/FrontiounLogo";
+import Link from "next/link";
 
 export default function Header() {
   const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
@@ -29,7 +30,7 @@ export default function Header() {
 
         <div className="flex items-center justify-between gap-x-4">
           <span className="hidden lg:block">
-              <DarkModeButton />
+            <DarkModeButton />
           </span>
 
           <Avatar isLoggedIn={loginHandler} />
@@ -44,8 +45,12 @@ export default function Header() {
       <section className="hidden w-10/12 py-5 m-auto shadow-md lg:block bg-slate-100 rounded-b-2xl px-11 dark:bg-slate-400">
         <ul className="center-center gap-x-8">
           <li className="text-gray-700 cursor-pointer">صفحه اصلی</li>
-          <li className="text-gray-700 cursor-pointer">دوره‌ها</li>
-          <li className="text-gray-700 cursor-pointer">بلاگ</li>
+          <Link href={"/courses"} className="text-gray-700 cursor-pointer">
+            دوره‌ها
+          </Link>
+          <Link href={"/blogs"} className="text-gray-700 cursor-pointer">
+            بلاگ
+          </Link>
           <li className="text-gray-700 cursor-pointer">درباره من</li>
         </ul>
       </section>
