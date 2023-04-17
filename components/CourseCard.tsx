@@ -13,9 +13,6 @@ interface Props {
 }
 
 const CourseCard = ({ price, image, title, children }: Props) => {
-  const [formattedNumber, setFormattedNumber] = useState<any>(
-    (1000000).toLocaleString()
-  );
   return (
     <NoSSR>
       <div className="relative bg-white shadow-md dark:bg-slate-900 rounded-3xl">
@@ -49,12 +46,16 @@ const CourseCard = ({ price, image, title, children }: Props) => {
             </Link>
 
             <div className="flex items-end gap-x-1.5 text-slate-800 dark:text-slate-100">
-              <span className="text-lg font-bold">{formattedNumber}</span>
+              <span className="text-lg font-bold">
+                {price === 0 ? "رایـــگـــان :)" : price.toLocaleString()}
+              </span>
               <div className="leading-[1]">
-                <div className="text-[9px] text-zinc-400 font-black pb-1.5">
-                  <h6>تــــو</h6>
-                  <h6>مان</h6>
-                </div>
+                {price !== 0 && (
+                  <div className="text-[9px] text-zinc-400 font-black pb-1.5">
+                    <h6>تــــو</h6>
+                    <h6>مان</h6>
+                  </div>
+                )}
               </div>
             </div>
           </div>
