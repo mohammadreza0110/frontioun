@@ -183,7 +183,7 @@ export default function ShowCourse() {
           </p>
         </section>
 
-        <section className="px-3 pt-1 pb-4 border shadow-md xl:sticky xl:top-0 dark:border-0 dark:bg-slate-700 rounded-2xl">
+        <section className="px-3 pt-1 pb-4 border shadow-md xl:sticky xl:top-8 dark:border-0 dark:bg-slate-700 rounded-2xl">
           <h3 className="py-3 font-bold text-center">
             اطلاعات دوره اینجاست :)
           </h3>
