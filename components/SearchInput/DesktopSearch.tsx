@@ -20,10 +20,11 @@ export default function SearchInput() {
         />
 
         <input
-          className="py-3 border-none bg-zinc-200 dark:bg-slate-700 placeholder:text-gray-500 dark:placeholder:text-white !rounded-full input-md w-full pr-10"
+          className="py-3 outline-none border-none bg-zinc-200 dark:bg-slate-700 placeholder:text-gray-500 dark:placeholder:text-white !rounded-full input-md w-full pr-10"
           type="search"
           id="default-search"
           placeholder="دنبال چی هستی؟"
+          autoComplete="off" 
           required
         />
 
