@@ -110,7 +110,7 @@ export default function Home() {
             فرانت شروع برنامه‌نویسی ست!
           </h1>
 
-          <p className="py-3 border-b-2 md:w-10/12 md:text-lg md:m-auto border-zinc-200 dark:border-primary-dark text-primary-dark dark:text-primary-light">
+          <p className="py-3 border-b-2 md:w-10/12 md:text-lg md:m-auto xl:m-0 border-zinc-200 dark:border-slate-700 text-slate-700 dark:text-primary-light">
             عمیق یاد می‌گیری چون عمیق بودن رسالت ماست
           </p>
 
@@ -131,7 +131,7 @@ export default function Home() {
           />
           <div
             id="banner-shadow"
-            className="absolute z-10 w-screen h-32 hero-shadow-gradient dark:hero-shadow-gradient-dark -bottom-[9px] blur-sm rounded-[19px] left-0 md:right-0 md:translate-x-0"
+            className="absolute z-10 w-full h-32 hero-shadow-gradient dark:hero-shadow-gradient-dark -bottom-[9px] blur-sm rounded-[19px] left-0 md:right-0 md:translate-x-0"
           />
         </div>
       </section>
