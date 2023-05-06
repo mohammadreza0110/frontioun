@@ -20,17 +20,15 @@ module.exports = {
       container: {
         center: true,
         padding: {
-        DEFAULT: '1rem',
-        lg: '2rem',
-        xl: '3rem',
-        '2xl': '4rem',
-      },
+          DEFAULT: "1rem",
+          lg: "2rem",
+          xl: "3rem",
+          "2xl": "4rem",
+        },
         screens: {
           "2xl": "1440px",
         },
       },
     },
   },
-
-  plugins: [require("@tailwindcss/line-clamp")],
 };
