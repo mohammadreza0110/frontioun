@@ -31,7 +31,7 @@ const DarkModeButton = ({ setThemeText }: any) => {
 
   useEffect(() => {
     setTheme("system");
-  }, []);
+  }, [setTheme]);
 
   return (
     <NoSSR>
