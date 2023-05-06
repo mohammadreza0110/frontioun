@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function CommentSystem() {
@@ -35,7 +36,9 @@ export default function CommentSystem() {
             <footer className="flex items-center justify-between mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center ml-3 text-sm text-gray-900 dark:text-white">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     className="w-6 h-6 ml-2 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
                     alt="محمدرضا خورسند"
@@ -138,7 +141,9 @@ export default function CommentSystem() {
             <footer className="flex items-center justify-between mb-2">
               <div className="flex items-center">
                 <p className="inline-flex items-center ml-3 text-sm text-gray-900 dark:text-white">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     className="w-6 h-6 ml-2 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                     alt="محمدرضا خورسند"
