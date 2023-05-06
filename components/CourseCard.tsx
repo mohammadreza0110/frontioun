@@ -22,6 +22,7 @@ const CourseCard = ({ price, image, title, children }: Props) => {
               <Image
                 {...image}
                 className="object-cover w-full h-full shadow-md rounded-3xl"
+                alt=""
               />
             </a>
           </div>
