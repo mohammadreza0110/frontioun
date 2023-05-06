@@ -24,7 +24,7 @@ This is a my startup project [Frontioun](https://google.com). Frontioun help you
 
 Users should be able to:
 
-- Fill in the form and see the card details update in real-time
+- Change the routing use Next-Link
 - Receive error messages when the form is submitted if:
   - Any input field is empty
   - The card number, expiry date, or CVC fields are in the wrong format
