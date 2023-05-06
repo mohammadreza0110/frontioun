@@ -3,13 +3,13 @@ import { RiTimerLine } from "react-icons/ri";
 import BaseButton from "./BaseButton";
 import { TfiArrowCircleLeft } from "react-icons/tfi";
 interface Props {
-    courseDetails: {
-      season: string;
-      name: string;
-      id: number;
-      lessons: { title: string; duration: string }[];
-    }[];
-  }
+  courseDetails: {
+    season: string;
+    name: string;
+    id: number;
+    lessons: { title: string; duration: string }[];
+  }[];
+}
 
 export default function SampleAccordion({ courseDetails }: Props) {
   const [selected, setSelected] = useState<any>(null);
@@ -20,12 +20,13 @@ export default function SampleAccordion({ courseDetails }: Props) {
     }
     setSelected(i);
   };
- 
+
   return (
     <>
       {courseDetails.map((course, i) => {
         return (
           <div
+            key={course.id}
             className={`my-2 transition-transform active rounded-xl bg-slate-200 dark:bg-slate-600`}
           >
             <div
@@ -54,7 +55,10 @@ export default function SampleAccordion({ courseDetails }: Props) {
             >
               {course.lessons.map((lesson, index) => {
                 return (
-                  <li className="flex items-center justify-between w-full px-6 py-4 my-2 border border-gray-400 dark:border-gray-500 dark:bg-gray-700 rounded-xl">
+                  <li
+                    key={lesson.title}
+                    className="flex items-center justify-between w-full px-6 py-4 my-2 border border-gray-400 dark:border-gray-500 dark:bg-gray-700 rounded-xl"
+                  >
                     <div className="flex items-center w-full text-xs gap-x-2 md:gap-x-4 md:text-base">
                       <h2 className="pl-2 text-sm border-l md:text-xl md:font-bold md:pl-4 border-l-slate-400 min-w-max whitespace-nowrap">
                         {index + 1}
