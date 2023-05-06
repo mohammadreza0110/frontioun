@@ -44,7 +44,9 @@ export default function Header() {
 
       <section className="hidden w-10/12 py-5 m-auto shadow-md lg:block bg-slate-100 rounded-b-2xl px-11 dark:bg-slate-400">
         <ul className="center-center gap-x-8">
-          <li className="text-gray-700 cursor-pointer">صفحه اصلی</li>
+          <Link href={"/"} className="text-gray-700 cursor-pointer">
+            صفحه اصلی
+          </Link>
           <Link href={"/courses"} className="text-gray-700 cursor-pointer">
             دوره‌ها
           </Link>
