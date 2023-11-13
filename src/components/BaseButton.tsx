@@ -2,7 +2,7 @@
 
 import useCustomWave from "@/hooks/useCustomWave";
 interface Props {
-  classes: string;
+  classes?: any;
   name: string | number;
   title?: string;
   children?: React.ReactNode;

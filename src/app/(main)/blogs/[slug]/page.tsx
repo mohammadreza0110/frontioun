@@ -1,11 +1,8 @@
 import RatingStars from "@/components/RatingStars";
 import Image from "next/image";
 import React from "react";
-interface Props {
-  classes: string;
-}
 
-export default function index({ classes }: Props) {
+export default function index({ classes }: any) {
   return (
     <main className="container grid grid-cols-12 mt-8 gap-x-8">
       <div
