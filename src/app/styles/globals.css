@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "yekan-bakh";
+  src: url("../font/YekanBakhFaNum-VF.ttf");
+}
+
+@layer base {
+  * {
+    @apply box-border p-0 m-0;
+  }
+
+  body {
+    font-family: "yekan-bakh";
+    direction: rtl;
+    @apply flex flex-col h-screen mx-auto overflow-x-hidden bg-zinc-100 dark:bg-gray-800;
+  }
+}
+
+@layer utilities {
+  .center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-none {
+    display: unset;
+  }
+
+  .hero-shadow-gradient {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 8%,
+      rgb(244, 245, 247) 80%
+    ) !important;
+  }
+
+  .hero-shadow-gradient-dark {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 8%,
+      rgb(31 41 55) 80%
+    ) !important;
+  }
+
+  .glass-container {
+    color: white;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  }
+
+  .glass-container-off {
+    color: unset;
+    backdrop-filter: unset;
+    background-color: unset;
+    box-shadow: unset;
+  }
+}
+
+.hero_text {
+  font-variation-settings: "wght" 831, "dots" 0;
+}
+
+.logo__gradient {
+  background: linear-gradient(270deg, #4ade80, #67e8f9, #f87171, #edf514);
+  background-clip: text;
+  color: transparent;
+  background-size: 800%;
+  animation: logo_animation 20s ease infinite;
+}
+
+@keyframes logo_animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
