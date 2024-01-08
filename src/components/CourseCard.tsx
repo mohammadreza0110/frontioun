@@ -15,7 +15,7 @@ const CourseCard = ({ price, image, title, children }: Props) => {
   return (
     <div className="relative bg-white shadow-md dark:bg-slate-900 rounded-3xl">
       <div className="h-40">
-        <div className="absolute w-full px-4 -top-10 h-52">
+        <div className="absolute w-full px-4 -top-16 xl:-top-10 h-60 xl:h-52">
           <a href="" className="w-full h-40">
             <Image
               {...image}
@@ -27,11 +27,11 @@ const CourseCard = ({ price, image, title, children }: Props) => {
       </div>
       <div className="p-5">
         <a href="#">
-          <h5 className="my-2 text-xl font-bold tracking-tight text-gray-800 dark:text-white">
+          <h5 className="my-2 text-lg font-bold tracking-tight text-gray-800 dark:text-white">
             {title}
           </h5>
         </a>
-        <div className="pb-8 text-xs font-normal text-zinc-500 dark:text-gray-400 min-h-[5rem]">
+        <div className="pb-8 text-sm/5 font-normal text-justify text-zinc-500 dark:text-gray-400 min-h-[5rem]">
           {children}
         </div>
         <div className="flex items-center justify-between">
