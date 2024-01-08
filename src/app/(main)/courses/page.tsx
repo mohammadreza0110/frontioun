@@ -59,7 +59,7 @@ export default function Courses() {
   return (
     <main className="container mt-8">
       <h2 className="text-2xl font-bold">دوره‌های خفن آموزشی</h2>
-      <div className="grid grid-cols-12 mt-20 gap-x-4">
+      <div className="xl:grid xl:grid-cols-12 mt-20 gap-x-4">
         <section className="col-span-3 text-lg font-bold text-slate-700">
           <h2 className="px-8 py-4 mb-6 text-center bg-white rounded-xl">
             نوع دوره
@@ -69,8 +69,8 @@ export default function Courses() {
           </h2>
         </section>
 
-        <section className="col-span-9 ">
-          <div className="grid grid-cols-3 gap-x-8 gap-y-20">
+        <section className="col-span-9 mt-28 xl:mt-0">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-24">
             {courseCards.map((course, index) => {
               return (
                 <CourseCard
