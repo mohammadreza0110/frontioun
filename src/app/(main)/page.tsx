@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="flex items-center justify-between pb-16">
+        <div className="flex items-center justify-between pb-20 xl:pb-16">
           <h2 className="text-xl font-black md:text-3xl text-slate-800 dark:text-slate-100">
             جدیدترین دوره‌ها
           </h2>
@@ -171,7 +171,7 @@ export default function Home() {
           <header className="pb-4 text-3xl font-black">
             از گوشه و کنار دنیای برنامه نویسی
           </header>
-          <p className="font-thin dark:text-slate-300">
+          <p className="dark:text-slate-300 text-slate-600 text-justify">
             نوشتن، یکی از فعالیت‌های جذاب و البته کاربردی در زندگی است. این
             فعالیت از ابتدای خلقت همراه انسان بوده و به او کمک کرده تا به روز
             باشه. ما، فضایی با نام «بلاگتیون» آماده کرده‌ایم که شما می‌توانید در
